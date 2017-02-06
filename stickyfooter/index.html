@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sticky Footer -- css secrets</title>
+	<style>
+		body{
+			display: flex;
+			flex-flow: column;
+			min-height: 100vh;
+		}
+		main{
+			flex:1;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Sticky Footer Demo</h1>
+	</header>
+	<main>
+		<p>
+			Getting the footer to stick to the bottom of pages with sparse content is something just about every Web developer has tried to tackle at some point in his or her career. And, for the most part, it’s a solved problem. Yet all the existing solutions have one significant shortcoming — they don’t work if the height of your footer is unknown.
+		</p>
+		<button onclick="toggle()">点击切换</button>
+		<div id="more">
+			<p>
+				Getting the footer to stick to the bottom of pages with sparse content is something just about every Web developer has tried to tackle at some point in his or her career. And, for the most part, it’s a solved problem. Yet all the existing solutions have one significant shortcoming — they don’t work if the height of your footer is unknown.
+				Getting the footer to stick to the bottom of pages with sparse content is something just about every Web developer has tried to tackle at some point in his or her career. And, for the most part, it’s a solved problem. Yet all the existing solutions have one significant shortcoming — they don’t work if the height of your footer is unknown.
+			</p>
+			<p>
+				Getting the footer to stick to the bottom of pages with sparse content is something just about every Web developer has tried to tackle at some point in his or her career. And, for the most part, it’s a solved problem. Yet all the existing solutions have one significant shortcoming — they don’t work if the height of your footer is unknown.
+			</p>
+			<p>
+				Flexbox is a perfect fit for this type of problem. While mostly known for laying out content in the horizontal direction, Flexbox actually works just as well for vertical layout problems. All you have to do is wrap the vertical sections in a flex container and choose which ones you want to expand. They’ll automatically take up all the available space in their container.
+			</p>
+			<p>
+				Flexbox is a perfect fit for this type of problem. While mostly known for laying out content in the horizontal direction, Flexbox actually works just as well for vertical layout problems. All you have to do is wrap the vertical sections in a flex container and choose which ones you want to expand. They’ll automatically take up all the available space in their container.
+			</p>
+			<p>
+				Flexbox is a perfect fit for this type of problem. While mostly known for laying out content in the horizontal direction, Flexbox actually works just as well for vertical layout problems. All you have to do is wrap the vertical sections in a flex container and choose which ones you want to expand. They’ll automatically take up all the available space in their container.
+			</p>
+		</div>
+	</main>
+	<footer>
+		<p>© 2015 No rights reserved.</p>
+		<p>Made with ♥by an anonymous pastafarian.</p>
+	</footer>
+	<script>
+		var toggleFlag = false;
+		function toggle(){
+			if(toggleFlag) {
+				// 已经隐藏了，进行显示
+				document.getElementById('more').style.display = 'block';
+			}else{
+				document.getElementById('more').style.display = 'none';
+			}
+			toggleFlag = !toggleFlag;
+		}
+	</script>
+</body>
+</html>
